@@ -1,0 +1,26 @@
+<h1 style="text-align:center">Sample Reactive Form</h1> <br>
+<div class="card" style="width: 50rem; height: auto;">
+    
+<div class="card-body">
+        
+<form class="row g-3" [formGroup]="userForm">
+
+    <div class="col-md-6">
+      <label for="name" class="form-label" >Product name</label>
+      <input type="name" formControlName="name" class="form-control" id="name" name="name" autocomplete="off">
+     
+    </div>
+
+    <div class="col-md-6">
+      <label for="price" class="form-label">Password</label>
+      <input type="password" formControlName="password" class="form-control" name="password" id="inputPassword4" autocomplete="off">
+    </div>
+
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+
+  </form>
+    </div>
+    </div>
