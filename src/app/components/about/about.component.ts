@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:AuthService,private activatedRoute:ActivatedRoute ) { }
 
+  data:any = []
   ngOnInit(): void {
+  //  this.service.getPost().subscribe(sub=>{
+  //   console.log(sub)
+  //   this.data = sub;
+  //  })
+
+  this.data = this.activatedRoute.snapshot.data['post']
   }
 
 }

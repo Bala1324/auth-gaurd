@@ -11,7 +11,7 @@ import { ReportsComponent } from './components/reports/reports.component';
 
 import {ReactiveFormsModule} from '@angular/forms';
 import { AddProductComponent } from './components/add-product/add-product.component'
-
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +19,14 @@ import { AddProductComponent } from './components/add-product/add-product.compon
     LoginComponent,
     AboutComponent,
     ContactComponent,
-    ReportsComponent,
-    AddProductComponent
+    // ReportsComponent,
+    // AddProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

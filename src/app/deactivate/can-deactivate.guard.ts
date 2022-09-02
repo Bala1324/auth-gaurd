@@ -8,6 +8,7 @@ import { AddProductComponent } from '../components/add-product/add-product.compo
 })
 export class CanDeactivateGuard implements CanDeactivate<AddProductComponent> {
   canDeactivate(component: AddProductComponent){
+
     if(component.userForm.dirty){
      let returnedData = confirm('when you leave this page you will lose your datas!')
     console.log(returnedData)
